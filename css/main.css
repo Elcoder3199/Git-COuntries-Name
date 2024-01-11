@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;0,800;1,300;1,400;1,700&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 34px;
+  padding: 17px 0;
+  background: #607D8B;
+  color: #ddd;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.container .form .inp-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.container .form .inp-group .inp,
+.container .form .inp-group #btn-search
+ {
+  border: none;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 12px 20px;
+}
+
+.container .form .inp-group .inp {
+  flex-basis: 80%;
+  border-radius: 2px;
+  font-size: 17px;
+  border: solid 0.2px #607d8b;
+}
+@media (max-width: 310px) {
+  .container .form .inp-group .inp {
+    font-size: 13px;
+  }
+}
+.container .form .inp-group #btn-search {
+  flex-basis: 10%;
+  background-color: #607D8B;
+  color: #fff;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 3px;
+}
+
+.container .form .inp-group #btn-search:active {
+  background-color: #378db8;
+}
+
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, auto));
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 6px;
+}
+
+.boxes .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 98%;
+  border-radius: 3px;
+  box-shadow: 69px 53px 75px 4px rgba(0, 0, 0, 0.1);
+  min-height: 100%;
+  line-height: 2.2;
+  background: #607D8B;
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.boxes .box .maps:hover {
+  color: #640909;
+}
+
+.box div {
+  border-bottom: 0.5px solid #555555;
+  width: 100% !important;
+  padding: 4px;
+}
+
+.img-box {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+.flag-img {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  margin-bottom: 10px;
+  position: absolute;
+  top: 0 !important;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+}
+.footer {
+  background-color: #607D8B;
+}
+.footer h3 {
+  color: #fff;
+  text-align: center;
+  padding: 12px 10px;
+}
