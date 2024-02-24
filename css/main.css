@@ -1,7 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,700;0,800;1,300;1,400;1,700&display=swap');
+
 * {
   box-sizing: border-box;
   font-family: 'Cairo', sans-serif;
+}
+
+
+/* preloader */
+.preloader {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: none;
+  -webkit-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.sk-spinner-wordpress.sk-spinner {
+  background-color: #378db8;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  position: relative;
+  -webkit-animation: sk-innerCircle 1s linear infinite;
+  animation: sk-innerCircle 1s linear infinite;
+}
+
+.sk-spinner-wordpress .sk-inner-circle {
+  display: block;
+  background-color: #fff;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  border-radius: 8px;
+  top: 5px;
+  left: 5px;
+}
+
+@-webkit-keyframes sk-innerCircle {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-innerCircle {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .title {
@@ -11,6 +77,20 @@
   background: #607D8B;
   color: #ddd;
   margin-bottom: 10px;
+}
+
+.no-data {
+  padding: 10px 30px;
+  background: #f7f7f7;
+  transform: scaleY(0);
+  display: block;
+  transform-origin: top;
+  font-size: 18px;
+  font-weight: bold;
+  color: #777;
+  width: 80%;
+  margin: 0 20px;
+  animation: scaleAndShow 0.4s linear forwards;
 }
 
 .container {
@@ -52,8 +132,7 @@
 }
 
 .container .form .inp-group .inp,
-.container .form .inp-group #btn-search
- {
+.container .form .inp-group #btn-search {
   border: none;
   outline: none;
   appearance: none;
@@ -68,11 +147,13 @@
   font-size: 17px;
   border: solid 0.2px #607d8b;
 }
+
 @media (max-width: 310px) {
   .container .form .inp-group .inp {
     font-size: 13px;
   }
 }
+
 .container .form .inp-group #btn-search {
   flex-basis: 10%;
   background-color: #607D8B;
@@ -125,6 +206,7 @@
   overflow: hidden;
   position: relative;
 }
+
 .flag-img {
   width: 100%;
   max-width: 100%;
@@ -137,11 +219,23 @@
   right: 0;
   object-fit: cover;
 }
+
 .footer {
   background-color: #607D8B;
 }
+
 .footer h3 {
   color: #fff;
   text-align: center;
   padding: 12px 10px;
+}
+
+@keyframes scaleAndShow {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
 }
